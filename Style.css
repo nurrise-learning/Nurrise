@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: #6a5acd;
+    color: white;
+    padding: 30px 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.quotes-section {
+    margin-top: 40px;
+}
+
+.quote-box {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.btn {
+    padding: 12px 20px;
+    background: #6a5acd;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    color: #777;
+}
