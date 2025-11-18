@@ -1,1 +1,5 @@
-quran data placeholder
+Place your files here:
+- upload icon-192.png and icon-512.png to repo root
+- add images under /designs/
+- add course PDFs under /courses/
+- add videos or links in the Videos section via the app UI
