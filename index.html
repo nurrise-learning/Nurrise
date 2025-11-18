@@ -1,30 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nurrise Learning</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nurrise — Motivation · Learning · Designs</title>
+
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#0b1220" />
 </head>
 <body>
+  <header class="topbar">
+    <div class="brand">Nurrise</div>
+    <button id="menuBtn" class="menu-btn">☰</button>
+  </header>
 
-    <header>
-        <h1>Nurrise Learning</h1>
-        <p>Your space for motivation, healing, and growth.</p>
-    </header>
+  <nav id="sidebar" class="sidebar hidden">
+    <button id="closeMenu" class="close-btn">✕</button>
+    <ul>
+      <li><a href="#" data-section="home">Home</a></li>
+      <li><a href="#" data-section="quotes">Quotes</a></li>
+      <li><a href="#" data-section="courses">Courses</a></li>
+      <li><a href="#" data-section="videos">Videos</a></li>
+      <li><a href="#" data-section="designs">Designs</a></li>
+      <li><a href="#" data-section="healing">Healing</a></li>
+      <li><a href="#" data-section="about">About</a></li>
+    </ul>
+  </nav>
 
-    <section class="quotes-section">
-        <h2>Daily Inspiration</h2>
-        <div id="quoteBox" class="quote-box">
-            Tap the button to get your quote ✨
+  <main id="main" class="main">
+    <!-- Home -->
+    <section id="home" class="section active">
+      <h1>Welcome to Nurrise</h1>
+      <p class="lead">Your space for motivation, learning, healing and digital designs — offline-ready.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Daily Inspiration</h3>
+          <p>Get a new quote every tap.</p>
+          <button id="newQuoteBtn" class="btn">New Quote</button>
+          <div id="quoteBox" class="quote">Tap "New Quote" to begin.</div>
         </div>
-        <button onclick="newQuote()" class="btn">Get Quote</button>
+
+        <div class="card">
+          <h3>Quick Courses</h3>
+          <p>Short lessons to build skills.</p>
+          <button data-section="courses" class="btn go">Open</button>
+        </div>
+
+        <div class="card">
+          <h3>Videos</h3>
+          <p>Watch or add video links.</p>
+          <button data-section="videos" class="btn go">Open</button>
+        </div>
+
+        <div class="card">
+          <h3>Designs</h3>
+          <p>Templates & thumbnails.</p>
+          <button data-section="designs" class="btn go">Open</button>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>© 2025 Nurrise Learning</p>
-    </footer>
+    <!-- Quotes -->
+    <section id="quotes" class="section">
+      <h2>Daily Quotes</h2>
+      <div id="quoteLarge" class="quote-large">You are stronger than your fears.</div>
+      <div class="controls">
+        <button id="prevQuote" class="btn">◀ Prev</button>
+        <button id="nextQuote" class="btn">Next ▶</button>
+        <button id="shareQuote" class="btn">Share</button>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Courses -->
+    <section id="courses" class="section">
+      <h2>Mini Courses</h2>
+      <ul id="coursesList" class="list"></ul>
+      <div class="hint">You can add course files (pdfs, html lessons) to /courses folder and link them here.</div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos" class="section">
+      <h2>Video Library</h2>
+      <p class="hint">Add video URLs below (YouTube / direct links). Offline playback for local files depends on browser support.</p>
+      <form id="videoForm" class="form-inline">
+        <input id="videoUrl" placeholder="Paste video URL or YouTube link" />
+        <button class="btn" type="submit">Add</button>
+      </form>
+      <ul id="videoList" class="list"></ul>
+    </section>
+
+    <!-- Designs -->
+    <section id="designs" class="section">
+      <h2>Designs & Templates</h2>
+      <p class="hint">Upload images and templates to the `designs/` folder in your repo and add thumbnails here.</p>
+      <div id="designGrid" class="grid"></div>
+    </section>
+
+    <!-- Healing -->
+    <section id="healing" class="section">
+      <h2>Healing</h2>
+      <p>Short guided breathing & healing messages.</p>
+      <button id="playHealing" class="btn">Play</button>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Nurrise</h2>
+      <p>Offline PWA demo. Add your content to the repo to expand each section.</p>
+      <p class="muted">Install this app on mobile: tap browser menu → Add to Home screen.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© Nurrise — offline-ready PWA • <a href="https://github.com/nurrise-learning" target="_blank">GitHub</a></small>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
